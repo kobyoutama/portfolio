@@ -1,6 +1,9 @@
 .title-size{
   font-size: 2rem;
 }
+.title-size:hover{
+  cursor: pointer;
+}
 
 .global-nav{
     color: #282c34;
