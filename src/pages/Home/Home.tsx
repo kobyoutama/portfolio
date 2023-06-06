@@ -10,8 +10,8 @@ export function Home(){
             </div>
             <RandomTextEffect>Koby Shaiseththah Outama</RandomTextEffect>
             <div className="Home-desc">
-            <RandomTextEffect>I am a UC Irvine graduate with a B.S.</RandomTextEffect>
-            <RandomTextEffect speed={1250}>IN</RandomTextEffect>
+            <RandomTextEffect>I am a UC Irvine graduate with a</RandomTextEffect>
+            <RandomTextEffect speed={175}>B.S. IN</RandomTextEffect>
             <RandomTextEffect speed={50}>Computer Science with a concentration in Information Systems.</RandomTextEffect>
             </div>
         </main>

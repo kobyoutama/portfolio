@@ -3,14 +3,20 @@
 }
 
 .global-nav{
-    z-index: 2;
-    background-color: #BFBFC4;
     color: #282c34;
+    background-color: #BFBFC4;
     display: flex;
-    justify-content:left;    
+    position: fixed;
     align-items: stretch;
+    justify-content:left;    
     gap: 2rem;
     padding: 0 2rem;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+.hide-nav{
+  transform: translateY(-100%);
 }
 
 .global-nav ul{
@@ -35,7 +41,6 @@
   }
 
   .global-nav li.active{
-    transition: 0.3s;
     color:black;
     font-weight: bold;
   }
@@ -44,4 +49,9 @@
     transition: 0.3s;
     letter-spacing: .313rem;
   }
-  
+
+  .global-nav li:hover:active{
+    transition: 0.3s;
+    color: #ffffff;
+    font-weight: bold;
+  }
