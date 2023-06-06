@@ -48,6 +48,7 @@
   .global-nav li:hover{
     transition: 0.3s;
     letter-spacing: .313rem;
+    cursor: pointer;
   }
 
   .global-nav li:hover:active{
