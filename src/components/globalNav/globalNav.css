@@ -1,0 +1,47 @@
+.title-size{
+  font-size: 2rem;
+}
+
+.global-nav{
+    z-index: 2;
+    background-color: #BFBFC4;
+    color: #282c34;
+    display: flex;
+    justify-content:left;    
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.global-nav ul{
+    padding: 0;
+    margin: 0.5rem;
+    display:flex;
+    list-style-type: none;
+    gap: 1rem;
+  }
+
+  .global-nav a{
+    color: inherit;
+    display: flex;
+    padding: .25rem;
+    height: 100%;
+    text-decoration: none;
+    align-items: center;
+  } 
+
+  .global-nav li{
+    transition: 0.3s;
+  }
+
+  .global-nav li.active{
+    transition: 0.3s;
+    color:black;
+    font-weight: bold;
+  }
+
+  .global-nav li:hover{
+    transition: 0.3s;
+    letter-spacing: .313rem;
+  }
+  
