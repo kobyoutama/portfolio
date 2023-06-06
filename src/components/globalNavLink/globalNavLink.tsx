@@ -1,18 +1,21 @@
 import React from "react";
-import { Link, LinkProps, useMatch, useResolvedPath } from "react-router-dom";
+import { Link } from "react-scroll";
+import { useMatch, useResolvedPath } from "react-router-dom";
 
 interface linkProps{
     to:string,
     children: React.ReactNode,
-    props?: LinkProps,
 }
 
-export const GlobalNavLink = ({to, children, ...props}:linkProps) => {
+export const GlobalNavLink = ({to, children}:linkProps) => {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
     return (
         <li className={isActive ? "active" : ""}>
-            <Link to={to} {...props}>
+            <Link to={to} 
+                spy={true}
+                smooth={true}
+                duration={500}>
                 {children}
             </Link>
         </li>
