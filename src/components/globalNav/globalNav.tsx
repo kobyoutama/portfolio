@@ -23,8 +23,6 @@ export const GlobalNav = () => {
     }, [])
 
     useEffect(() => {
-        console.log(y.prev, y.curr);
-
         if(y.curr > 200 && y.curr > y.prev)
             setshow(false);
         else    
