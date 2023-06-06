@@ -3,7 +3,7 @@ import { RandomTextEffect } from "../../components/randomTextEffect";
 
 export function Home(){
     return(
-        <div className="Home"> 
+        <div className="Home" id='home'> 
         <main className='Home-main'>
             <div className="Home-desc">
             <RandomTextEffect>Hello! My Name Is</RandomTextEffect>
