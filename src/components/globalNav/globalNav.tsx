@@ -1,11 +1,31 @@
 import React, { useEffect, useState } from "react";
 import "./globalNav.css";
 import { GlobalNavLink } from "../globalNavLink/globalNavLink";
+import { Link as DomLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
-export const GlobalNav = () => {
+interface GlobalNavProp{
+    width:number
+}
+
+export const GlobalNav = (props:GlobalNavProp) => {
+    let defaultName = props.width<600 ?"Koby S. Outama":"Koby Shaisethah Outama";
+    
     const [y, setyDelt] = useState({curr:0, prev:0});
     const [show, setshow] = useState(true);
+    const [name, setName] = useState(defaultName);
+    const [minDisp, setMinDisp] = useState(props.width<600);
+
+    useEffect(() => {
+        if(props.width < 600){
+            setName("Outama");
+            setMinDisp(true);
+        } 
+        else {
+            setName("Koby Outama");
+            setMinDisp(false);
+        }  
+    });
 
     useEffect(()=>{
         const handleScroll = () => {
@@ -20,7 +40,7 @@ export const GlobalNav = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-    }, [])
+    }, []);
 
     useEffect(() => {
         if(y.curr < 10 || y.curr < y.prev)
@@ -30,20 +50,33 @@ export const GlobalNav = () => {
     
     }, [y]);
 
-    return (<nav className={show ? "global-nav": "global-nav hide-nav"}>
-        <Link to='home' 
-            className='title-size' 
-            spy={true}
-            smooth={true}
-            duration={500}>Koby S. Outama</Link>
-        <ul>
-            <GlobalNavLink to='home'>Home</GlobalNavLink>
-            <GlobalNavLink to='about'>About Me</GlobalNavLink>
-            <GlobalNavLink to='contact'>Contact</GlobalNavLink>
-            <li>
-                <Link to="/Outama_Koby_Resume.pdf" target="_blank">Resume</Link>
-            </li>
-        </ul>
+    return (<nav className={show ? "global-nav" : "global-nav hide-nav"}>
+        <div>
+            <Link to='home' 
+                className='title-size' 
+                spy={true}
+                smooth={true}
+                duration={500}>{name}</Link>
+        </div>
+        <div>
+            <ul>
+                <GlobalNavLink to='home'>
+                    {minDisp?<span aria-hidden="true" className="fas fa-home" title="home"></span>
+                        :"Home"}</GlobalNavLink>
+                <GlobalNavLink to='about'>
+                    {minDisp?<span aria-hidden="true" className="fas fa-user" title="about-me"></span>
+                        :"About Me"}</GlobalNavLink>
+                <GlobalNavLink to='contact'>
+                    {minDisp?<span aria-hidden="true" className="fas fa-phone" title="contact"></span>
+                        :"Contact"}</GlobalNavLink>
+                <li>
+                    <DomLink to="/Outama_Koby_Resume.pdf" target="_blank">
+                        {minDisp?<span aria-hidden="true" className="fas fa-file"></span>
+                            :"Resume"}</DomLink>
+                </li>
+            </ul>
+        </div>
+
     </nav>
     );
   };

@@ -1,13 +1,21 @@
 .title-size{
   font-size: 2rem;
+  transition: 0.3s;
 }
+
 .title-size:hover{
   cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: .313rem;
+}
+
+.title-size:active{
+  color: #ffffff;
 }
 
 .global-nav{
-    color: #282c34;
-    background-color: #BFBFC4;
+  background-color: var(--primary-color);
+  color: var(--primary-background-color);
     display: flex;
     position: fixed;
     align-items: stretch;
@@ -26,6 +34,7 @@
     padding: 0;
     margin: 0.5rem;
     display:flex;
+    height: fit-content;
     list-style-type: none;
     gap: 1rem;
   }
@@ -43,13 +52,7 @@
     transition: 0.3s;
   }
 
-  .global-nav li.active{
-    color:black;
-    font-weight: bold;
-  }
-
   .global-nav li:hover{
-    transition: 0.3s;
     letter-spacing: .313rem;
     cursor: pointer;
   }
@@ -59,3 +62,11 @@
     color: #ffffff;
     font-weight: bold;
   }
+
+.global-nav div{
+  height:fit-content;
+}
+
+.global-min{
+  justify-content: space-between;
+}
