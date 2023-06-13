@@ -1,5 +1,43 @@
 .about{
-    text-align: center;
-    background-color: white;
+    padding-top: 2.5rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
     min-height: 100vh;
+}
+
+.container{
+    overflow: auto;
+    text-align:justify;
+}
+
+.container img{
+    float:left;
+    margin-right: 2rem;
+}
+
+.headshot{
+    object-fit: cover;
+    height: auto;
+    width: clamp(10vw,30vw,45vw);
+    border-radius: 10%;
+}
+
+.about-title{
+    color: var(--primary-color);
+    font-size: var(--title-size);
+    margin-top: 0rem;
+    text-align: center;
+}
+
+.about p{
+    margin-top: 0;
+    font-size: var(--p-size);
+    color: var(--secondary-color);
+}
+
+a{
+    color:var(--tertiary-color);
+}
+a::after{
+    color:aliceblue;
 }
