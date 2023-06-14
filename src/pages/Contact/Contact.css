@@ -1,5 +1,35 @@
 .contact{
+    color: var(--secondary-color);
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    min-height: 50vh;
+    margin-top: 0;
+}
+
+.contact-title{
+    color: var(--primary-color);
+    font-size: var(--title-size);
     text-align: center;
-    background-color: blue;
-    min-height: 100vh;
+}
+
+.contact-desc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.contact-desc div{
+    font-size: 1rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    /* font-size: var(--p-size); */
+}
+
+.contact-desc a{
+    text-decoration: none;
+}
+
+.contact-desc a span{
+    color: var(--secondary-color)
 }
