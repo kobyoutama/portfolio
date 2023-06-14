@@ -70,7 +70,7 @@ export const GlobalNav = (props:GlobalNavProp) => {
                     {minDisp?<span aria-hidden="true" className="fas fa-phone" title="contact"></span>
                         :"Contact"}</GlobalNavLink>
                 <li>
-                    <DomLink to= {process.env.PUBLIC_URL+"Outama_Koby_Resume.pdf"} target="_blank">
+                    <DomLink to= {process.env.PUBLIC_URL+"/Outama_Koby_Resume.pdf"} target="_blank">
                         {minDisp?<span aria-hidden="true" className="fas fa-file"></span>
                             :"Resume"}</DomLink>
                 </li>
