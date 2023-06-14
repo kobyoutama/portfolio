@@ -1,0 +1,14 @@
+.footer{
+    color: var(--primary-background-color);
+    background-color: var(--primary-color);
+    font-size: var(--p-size);
+    min-height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer img{
+    height: 1rem;
+    object-fit: cover;
+}
