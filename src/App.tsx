@@ -7,6 +7,7 @@ import { Home } from './pages/Home/Home';
 import { About } from './pages/About/About';
 import { NotFound } from './pages/NotFound/NotFound';
 import { Contact } from './pages/Contact/Contact';
+import { Footer } from './pages/Footer/Footer';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -29,6 +30,7 @@ return (<>
     <About/>
     <hr></hr>
     <Contact/>
+    <Footer/>
     {/* This was for when it was multipage routing 
     <Routes>
       <Route path="/" element={<Home/>}/>
