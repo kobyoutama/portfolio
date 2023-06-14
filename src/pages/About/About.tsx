@@ -38,7 +38,7 @@ export function About(){
         <section className="about" id="about">
             <h1 className='about-title'>who am i?</h1>
             <div className="container">
-                <img className='headshot' src='/headshot.JPG'></img>
+                <img className='headshot' src={process.env.PUBLIC_URL+'/headshot.JPG'}></img>
                     {bioText}
                     {personalInfoText}
                     {outsideInterestsText}
