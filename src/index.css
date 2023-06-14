@@ -25,3 +25,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+  color:var(--tertiary-color);
+}
+a:hover{
+  color:aliceblue;
+}

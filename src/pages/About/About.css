@@ -34,10 +34,3 @@
     font-size: var(--p-size);
     color: var(--secondary-color);
 }
-
-a{
-    color:var(--tertiary-color);
-}
-a::after{
-    color:aliceblue;
-}
