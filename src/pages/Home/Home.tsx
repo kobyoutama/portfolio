@@ -23,7 +23,7 @@ export function Home(props: HomeProp){
             <RandomTextEffect text={name}>{defaultName}</RandomTextEffect>
             <div className="Home-desc">
             <RandomTextEffect>I am a UC Irvine graduate with a</RandomTextEffect>
-            <RandomTextEffect speed={175}>B.S. IN</RandomTextEffect>
+            <RandomTextEffect>Bachelor of Science in</RandomTextEffect>
             <RandomTextEffect speed={50}>Computer Science with a concentration in Information Systems.</RandomTextEffect>
             </div>
         </main>
